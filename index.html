@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>安宁利率计算</title>
+<title>名朝利率计算</title>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -36,7 +36,7 @@ var _hmt = _hmt || [];
           <div class="m-2-1">
             <form action="#" method="post">
 			<div class="m-2-2-2">
-                   <input class="am-active" type="button" checke="1"val="1.0900" yue="36" value="三年"id="option1" /> 
+                   <input class="am-active" type="button" checke="1"val="1.0950" yue="36" value="三年"id="option1" /> 
 				   <!--<input   class="am-active"  type="button"checke="0" val="1.0800" yue="24"style="background:transparent" value="二年"id="option2" />  
 				   <input  class="am-active" type="button" checke="0"val="1.0400" yue="12"style="background:transparent"value="一年" id="option3" />--> 
                 </div> 
@@ -172,7 +172,7 @@ function accDiv(arg1, arg2) {//浮点除法
 }
 $(document).ready(function(){		
 $("#sum").click(function(){
-var ru=1.0900;
+var ru=1.0950;
 var yue=36;
    $(".am-active").each(function(){
       if($(this).attr("checke")=="1")
@@ -185,8 +185,8 @@ var yue=36;
 	var temp=accSub(a,ru);
 	var b=parseInt($("#dai").val());//b是贷款额度
 	var f=accMul(temp,b);//分期金额精确值
-	var c=(Math.ceil(f/100))*100;//c是向上取整后的中间值即总贷款额度
-	
+	//var c=(Math.ceil(f/100))*100;//c是向上取整后的中间值即总贷款额度
+	var c=f;
 	var d=accMul(c,ru)//d是总共的本息额度
 	var e=accDiv(d,yue);//e是月供
 		$("#a1").html("");
@@ -196,7 +196,7 @@ var yue=36;
 		$("#az").html("公式:");
 			$("#a1").html(a+"-"+ru+"="+temp);
 			$("#bz").html("分期金额:");
-			$("#b1").html(b+"*"+temp+"="+f+"-->"+c);
+			$("#b1").html(b+"*"+temp+"="+f);
 			$("#cz").html("贷款总金额:");
 			$("#c1").html(c+"*"+ru+"="+d);
 			$("#dz").html("月供:");
@@ -228,7 +228,7 @@ var yue=36;
     <div class="m-x19 xzleft"></div>
     <div class="m-x20"></div>  
     <div class="m-8"></div>
-    <div class="m-9"><div class="masked1" id="sx8" style="margin-right:200px">安宁利率</div></div> 
+    <div class="m-9"><div class="masked1" id="sx8" style="margin-right:200px">名朝利率</div></div> 
     <div class="m-11">
     	<div class="m-k-1"><div class="t1"></div></div>
         <div class="m-k-2"><div class="t2"></div></div>
