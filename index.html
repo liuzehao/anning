@@ -185,8 +185,7 @@ var yue=36;
 	var temp=accSub(a,ru);
 	var b=parseInt($("#dai").val());//b是贷款额度
 	var f=accMul(temp,b);//分期金额精确值
-	//var c=(Math.ceil(f/100))*100;//c是向上取整后的中间值即总贷款额度
-	var c=f;
+	var c=(Math.ceil(f/100))*100;//c是向上取整后的中间值即总贷款额度
 	var d=accMul(c,ru)//d是总共的本息额度
 	var e=accDiv(d,yue);//e是月供
 		$("#a1").html("");
@@ -196,7 +195,7 @@ var yue=36;
 		$("#az").html("公式:");
 			$("#a1").html(a+"-"+ru+"="+temp);
 			$("#bz").html("分期金额:");
-			$("#b1").html(b+"*"+temp+"="+f);
+			$("#b1").html(b+"*"+temp+"="+f+"-->"+c);
 			$("#cz").html("贷款总金额:");
 			$("#c1").html(c+"*"+ru+"="+d);
 			$("#dz").html("月供:");
